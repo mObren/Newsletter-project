@@ -27,13 +27,13 @@
                <p class="news_content"><?php limitChars($data['news']->content);?></p>
 
             <?php if (checkIsUserLoggedIn()) { ?>
-                <a class="button button_delete" href="<?=URLROOT;?>/delete/<?= $data['news']->id;?>">Delete news</a>
+                <a class="button button_delete" href="<?=URLROOT;?>/news/delete/<?= $data['news']->id;?>">Delete news</a>
 
                 <a class="button" href="insert/<?= $data['news']->id;?>">Update</a>
 
              <?php   } ?>    
 
-              <a class="button button_visit" href="<?=URLROOT;?>/single/<?= $data['news']->id;?>">View</a>
+              <a class="button button_visit" href="<?=URLROOT;?>/news/single/<?= $data['news']->id;?>">View</a>
               <br>
               </div>
 
