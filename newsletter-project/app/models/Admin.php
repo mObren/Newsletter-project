@@ -17,8 +17,7 @@ class Admin implements Model {
     public function register($username, $password) {
         $db = new Database;
         $query = "INSERT INTO admins (username, password, created_at, updated_at) values ('$username', '$password', NOW(), NOW())";
-        prettyArrayDisplay($password);
-
+    
         $db->write($query);
     }
     public function login($username, $password) {
