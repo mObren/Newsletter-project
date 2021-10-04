@@ -69,7 +69,8 @@ Class AdminController extends Controller {
     }
     public function register() {
         $this->loadModel($this->modelName);
-        $this->view('admin/register');
+        $data['page_title'] = "Register";
+        $this->view('admin/register', $data);
         $model = new Admin;
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
@@ -90,10 +91,12 @@ Class AdminController extends Controller {
             if (empty($data['usernameError']) && empty($data['passwordError'])) {
                
                 $model->register($data['username'], $data['password']);
-        
             }
+            header("Location: login");
+           
 
     }
+   
 }
 
     protected function createSession($user) {
