@@ -7,7 +7,7 @@
     Username : <input class="textfield" type="text" name="username">
     Password : <input class="textfield" type="password" name="password">
 
-    <input class="button" type="submit" value="login">
+    <input class="button" type="submit" value="register">
 
  
     <div class="errors">
